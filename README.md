@@ -1,2 +1,2 @@
 # I'll Be Honest
-A Hobby Roasting platform.
+A spicy hobby social media platform.
