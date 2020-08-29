@@ -17,6 +17,7 @@ class Post extends Model {
           'post_url',
           'title',
           'created_at',
+          'content'
           [
             sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'),
             'vote_count'
@@ -25,7 +26,7 @@ class Post extends Model {
         include: [
           {
             model: models.Comment,
-            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+            attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at', 'content'],
             include: {
               model: models.User,
               attributes: ['username']
@@ -63,6 +64,18 @@ Post.init(
         model: 'user',
         key: 'id'
       }
+    },
+    category_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: 'category',
+        key: 'id'
+      }
+    },
+    content: {
+      type: DataTypes.STRING,
+      allowNull: true
     }
   },
   {
