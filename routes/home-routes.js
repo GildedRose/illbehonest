@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
     Post.findAll({
         attributes: [
           'id',
-          'post_url',
+          'image_url',
           'title',
           'created_at',
           [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -52,7 +52,7 @@ router.get('/post/:id', (req, res) => {
     // // hard coded post for test purposes
     // const post = {
     //   id: 1,
-    //   post_url: 'https://handlebarsjs.com/guide/',
+    //   image_url: 'https://handlebarsjs.com/guide/',
     //   title: 'Handlebars Docs',
     //   created_at: new Date(),
     //   vote_count: 10,
@@ -68,7 +68,7 @@ router.get('/post/:id', (req, res) => {
         },
         attributes: [
           'id',
-          'post_url',
+          'image_url',
           'title',
           'created_at',
           [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']

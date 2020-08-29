@@ -58,13 +58,14 @@ Post.hasMany(Comment, {
     foreignKey: 'post_id'
 });
 
-// Post.belongsTo(Category, {
-//     foreignKey: ' post_id'
-// });
+Category.hasMany(Post, {
+    foreignKey: 'category_id'
+});
 
-// Category.hasMany(Post, {
-//     foreignKey: 'post_id'
-// });
+Post.belongsTo(Category, {
+    foreignKey: 'category_id'
+});
+
 
 module.exports = { User, Post, Vote, Comment, Category };
   
