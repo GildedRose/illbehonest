@@ -14,7 +14,7 @@ class Post extends Model {
         },
         attributes: [
           'id',
-          'image_url',
+          'post_url',
           'title',
           'created_at',
           [
@@ -50,7 +50,7 @@ Post.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    image_url: {
+    post_url: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
