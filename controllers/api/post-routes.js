@@ -9,9 +9,10 @@ router.get('/', (req, res) => {
   Post.findAll({
     attributes: [
       'id',
-      'image_url',
+      'post_url',
       'title',
       'created_at',
+      'content',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     order: [['created_at', 'DESC']],
@@ -20,7 +21,7 @@ router.get('/', (req, res) => {
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at', 'content'],
         include: {
           model: User,
           attributes: ['username']
@@ -50,7 +51,7 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    attributes: ['id', 'image_url', 'title', 'created_at',
+    attributes: ['id', 'post_url', 'title', 'created_at', 'content',
       [
         sequelize.literal(
           '(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'
@@ -84,9 +85,10 @@ router.post('/', (req, res) => {
   // expects {title: 'Taskmaster goes public!', image_url: 'https://taskmaster.com/press', user_id: 1}
   Post.create({
     title: req.body.title,
-    image_url: req.body.image_url,
+    post_url: req.body.post_url,
     user_id: req.body.user_id,
-    category_id: req.body.category_id
+    category_id: req.body.category_id,
+    content: req.body.content
   })
     // .then((dbPostData) => {
     //   if (req.body.categoryIds.length) {
