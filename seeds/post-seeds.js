@@ -3,19 +3,16 @@ const { Post } = require('../models');
 // seed data for post here
 const postdata = [
     {
-      id: 1,
       title: 'Crazy Kool-Aid',
       post_url: 'http://imgur.com',
       user_id: 1
     },
     {
-      id: 2,
       title: 'Some Days are Matter Days',
       post_url: 'http://imgur.com',
       user_id: 3
     },
     {
-      id: 3,
       title: 'Piranha Plants DO Exist!',
       post_url: 'http://imgur.com',
       user_id: 2
