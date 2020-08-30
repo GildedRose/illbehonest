@@ -20,7 +20,7 @@ const commentdata = [
     {
       comment_text: 'Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.',
       user_id: 3,
-      post_id: 18
+      post_id: 12
     },
     {
       comment_text: 'In hac habitasse platea dictumst.',
