@@ -1,0 +1,46 @@
+{
+  "name": "illbehonest",
+  "version": "1.0.0",
+  "description": "A cutthroat hobbyist social media fullstack web development platform where users can submit posts for two types of audience feedback: \"Don't Make Me Cry\" or \"Roast Me, Baby\".",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seeds": "node seeds/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GildedRose/illbehonest.git"
+  },
+  "keywords": [
+    "node.js",
+    "express.js",
+    "social media platform",
+    "voting system",
+    "sequelize",
+    "MySQL",
+    "Foundation Framework",
+    "Sass",
+    "Javascript",
+    "Moment.js",
+    "dotenv",
+    "Gulp",
+    "heroku"
+  ],
+  "author": "GildedRose, Devmadia, Ottiemobile, ericy98, osadenaike",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GildedRose/illbehonest/issues"
+  },
+  "homepage": "https://github.com/GildedRose/illbehonest#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^7.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node": "^14.8.0",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.4",
+    "express-session": "^1.17.1"
+  }
+}
