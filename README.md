@@ -41,6 +41,12 @@ A cutthroat hobbyist social media fullstack web development platform where users
     * WHEN post is created, CATEGORY is assigned for voting purposes
     * WHEN post is created, COMMENTS are enabled
   
+  ### FUTURE UPDATES:
+
+  * Posts
+    * users can upload image links to content for roasting
+    * users can create content messages per posts to explain included image
+
   ## Installation
 
   ## Usage
