@@ -9,9 +9,10 @@ router.get('/', (req, res) => {
   Post.findAll({
     attributes: [
       'id',
-      'image_url',
+      'post_url',
       'title',
       'created_at',
+  
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     order: [['created_at', 'DESC']],
@@ -50,7 +51,7 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    attributes: ['id', 'image_url', 'title', 'created_at',
+    attributes: ['id', 'post_url', 'title', 'created_at',
       [
         sequelize.literal(
           '(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'
@@ -81,12 +82,13 @@ router.get('/:id', (req, res) => {
 // Create a Post
 // router.post('/', withAuth, (req, res) => {
 router.post('/', (req, res) => {
-  // expects {title: 'Taskmaster goes public!', image_url: 'https://taskmaster.com/press', user_id: 1}
+  // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
   Post.create({
     title: req.body.title,
-    image_url: req.body.image_url,
+    post_url: req.body.post_url,
     user_id: req.body.user_id,
-    category_id: req.body.category_id
+    category_id: req.body.category_id,
+    content: req.body.content
   })
     // .then((dbPostData) => {
     //   if (req.body.categoryIds.length) {
@@ -108,26 +110,26 @@ router.post('/', (req, res) => {
 
 // PUT /api/posts/upvote
 // router.put('/upvote', withAuth, (req, res) => {
-// router.put('/upvote', (req, res) => {
-//   // custom static method created in models/Post.js
-//   // Post.upvote(req.body, { Vote })
-//   //   .then(updatedPostData => res.json(updatedPostData))
-//   //   .catch(err => {
-//   //     console.log(err);
-//   //     res.status(400).json(err);
-//   //   });
+router.put('/upvote', (req, res) => {
+  // custom static method created in models/Post.js
+  // Post.upvote(req.body, { Vote })
+  //   .then(updatedPostData => res.json(updatedPostData))
+  //   .catch(err => {
+  //     console.log(err);
+  //     res.status(400).json(err);
+  //   });
 
-//   // make sure the session exists first
-//   if (req.session) {
-//     // pass session id along with all destructured properties on req.body
-//     Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
-//       .then(updatedVoteData => res.json(updatedVoteData))
-//       .catch(err => {
-//         console.log(err);
-//         res.status(500).json(err);
-//       });
-//   }
-// });
+  // make sure the session exists first
+  if (req.session) {
+    // pass session id along with all destructured properties on req.body
+    Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
+      .then(updatedVoteData => res.json(updatedVoteData))
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  }
+});
 
 // Update a post's title
 // router.put('/:id', withAuth, (req, res) => {

@@ -3,6 +3,23 @@ const { Category } = require('../../models');
 
 // The `/api/categories` endpoint
 
+// Get all categories
+router.get('/category', (req, res) => {
+    const sql = `SELECT * FROM category`;
+    const params = [];
+    db.all(sql, params, (err, rows) => {
+      if (err) {
+        res.status(500).json({ error: err.message });
+        return;
+      }
+  
+      res.json({
+        message: 'success',
+        data: rows
+      });
+    });
+  });
+
 router.get('/', (req, res) => {
     Category.findAll()
         .then(dbCategoryData => res.json(dbCategoryData))
@@ -20,7 +37,7 @@ router.get('/:id', (req, res) => {
     })
         .then(dbCategoryData => {
             if (!dbCategoryData) {
-                res.status(404).json({ message: 'Sorry this was not found.' })
+                res.status(404).json({ message: 'Sorry this id was not found.' })
                 return;
             }
             res.json(dbCategoryData)

@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
     Post.findAll({
         attributes: [
           'id',
-          'image_url',
+          'post_url',
           'title',
           'created_at',
           [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -31,14 +31,14 @@ router.get('/', (req, res) => {
       })
         .then(dbPostData => {
             // pass a single post object into the homepage template
-            console.log(dbPostData[0]);
+            // console.log(dbPostData[0]);
             /* don't need to  need to serialize data before when you built API routes, because the res.json() method automatically does that */
             // res.render('homepage', dbPostData[0].get({ plain: true }));
             const posts = dbPostData.map(post => post.get({ plain: true }));
             // res.render('homepage', dbPostData[0]);
             res.render('homepage', {
               posts,
-              loggedIn: req.session.loggedIn
+              // loggedIn: req.session.loggedIn
             });
         })
         .catch(err => {
@@ -52,7 +52,7 @@ router.get('/post/:id', (req, res) => {
     // // hard coded post for test purposes
     // const post = {
     //   id: 1,
-    //   image_url: 'https://handlebarsjs.com/guide/',
+    //   post_url: 'https://handlebarsjs.com/guide/',
     //   title: 'Handlebars Docs',
     //   created_at: new Date(),
     //   vote_count: 10,
@@ -68,7 +68,7 @@ router.get('/post/:id', (req, res) => {
         },
         attributes: [
           'id',
-          'image_url',
+          'post_url',
           'title',
           'created_at',
           [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
