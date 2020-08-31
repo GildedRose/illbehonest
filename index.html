@@ -39,19 +39,43 @@
   <div class="large-12 cell">
     <div class="callout">
       <h3>It's the honest ones you've got to watch out for...</h3>
-      <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-      <p>Once you've exhausted the fun in this document, you should check out:</p>
-      <div class="grid-x grid-padding-x">
-        <div class="large-4 medium-4 cell">
-          <p><a href="https://get.foundation/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-        </div>
-        <div class="large-4 medium-4 cell">
-          <p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
-        </div>
-        <div class="large-4 medium-4 cell">
-          <p><a href="https://get.foundation/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowledge.</p>
-        </div>
-      </div>
+      <div class="card-profile-stats">
+        <div class="card-profile-stats-intro">
+          <img class="card-profile-stats-intro-pic" src="https://pbs.twimg.com/profile_images/732634911761260544/OxHbNdTF.jpg" alt="profile-image" />
+          <div class="card-profile-stats-intro-content">
+            <h3>Joe Smith</h3>
+            <p>Joined Jan.16th 2017</small></p>
+          </div> <!-- /.card-profile-stats-intro-content -->
+        </div> <!-- /.card-profile-stats-intro -->
+      
+        <hr />
+      
+        <div class="card-profile-stats-container">
+          <div class="card-profile-stats-statistic">
+            <span class="stat">25</span>
+            <p>posts</p>
+          </div> <!-- /.card-profile-stats-statistic -->
+          <div class="card-profile-stats-statistic">
+            <span class="stat">125</span>
+            <p>followers</p>
+          </div> <!-- /.card-profile-stats-statistic -->
+          <div class="card-profile-stats-statistic">
+            <span class="stat">88</span>
+            <p>likes</p>
+          </div> <!-- /.card-profile-stats-statistic -->
+        </div> <!-- /.card-profile-stats-container -->
+      
+        <div class="card-profile-stats-more">
+          <p class="card-profile-stats-more-link"><a href="#"><i class="fa fa-angle-down" aria-hidden="true"></i></a></p>
+          <div class="card-profile-stats-more-content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem libero fugit, pariatur maxime! Optio enim, deserunt quia molestiae fugiat delectus, dolore et esse nostrum, quod autem necessitatibus fugit soluta repellendus.
+            </p>
+          </div> <!-- /.card-profile-stats-more-content -->
+        </div> <!-- /.card-profile-stats-more -->
+      </div> <!-- /.card-profile-stats -->
+      
+      
       <div class="status-update-input-box">
         <form>
           <div class="row input-box-container">
@@ -127,10 +151,59 @@
           <div class="small-12 medium-12 large-4 columns">
             <div class="clearfix"></div>
             <p>
-              Post Place Holder
-              <a href="#" class="read-more">
-                Vote/ Comment Place Holder
-              </a>
+              Post Place Holder </p>
+              <!-- comments -->
+            <div class="comment-section-container">
+              <h3>Comments (2)</h3>
+              <div class="comment-section-author">
+                <img src="https://placehold.it/50x50" alt="">
+                <div class="comment-section-name">
+                  <h5><a href="">Janice Jones</a></h5>
+                  <p>March 12, 2017 at 1:28pm</p>
+                </div>
+              </div>
+              <div class="comment-section-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum facilis tenetur a voluptatibus quia
+                  deserunt.
+                </p>
+              </div>
+              <div class="comment-section-author">
+                <img src="https://placehold.it/50x50" alt="">
+                <div class="comment-section-name">
+                  <h5><a href="">Janice Jones</a></h5>
+                  <p>March 12, 2017 at 1:28pm</p>
+                </div>
+              </div>
+              <div class="comment-section-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum facilis tenetur a voluptatibus quia deserunt.
+                </p>
+              </div>
+            </div>
+            <!--/comments-->
+
+            <!-- comment form -->
+            <form class="comment-section-form">
+              <div class="comment-section-box">
+                <div class="row">
+                  <div class="small-12 column">
+                    <h4>Leave a Comment</h4>
+                    <label>Name
+                      <input type="text">
+                    </label>
+                    <label>Email
+                      <input type="text">
+                    </label>
+                    <label>Comment
+                      <textarea rows="10" type="text"></textarea>
+                    </label>
+                    <button class="button expanded">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <!--/comment box-->
+
+
             </p>
           </div>
         </div>
@@ -142,10 +215,6 @@
     </div>
   </div>
 </div>
-
-<div class="grid-x grid-padding-x">
-  <div class="large-8 medium-8 cell">
-    <h5>Here&rsquo;s your basic grid:</h5>
 
 
 <!-- Scripts -->

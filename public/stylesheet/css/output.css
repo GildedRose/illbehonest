@@ -212,4 +212,65 @@
   color: color #423d3d;
 }
 
+.comment-section-container {
+  background-color: color white;
+  padding: 0;
+}
+
+.comment-section-author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.comment-section-author .comment-section-name {
+  margin-left: 1rem;
+}
+.comment-section-author .comment-section-name p {
+  margin-bottom: 0;
+}
+
+.comment-section-box {
+  background-color: color light-gray;
+  padding: 0;
+}
+
+.card-profile-stats {
+  border: 1px solid color #423d3d;
+  margin: 0 0 1.25rem;
+  padding: 1.25rem;
+  background: #FFFFFF;
+}
+.card-profile-stats .card-profile-stats-intro {
+  text-align: center;
+}
+.card-profile-stats .card-profile-stats-intro .card-profile-stats-intro-pic {
+  border-radius: 50%;
+  margin: 0 0 1.25rem;
+}
+.card-profile-stats .card-profile-stats-intro .card-profile-stats-intro-content p:last-child {
+  margin: 0;
+}
+.card-profile-stats .card-profile-stats-container {
+  text-align: center;
+}
+.card-profile-stats .card-profile-stats-container .card-profile-stats-statistic {
+  margin: 0 0 1.25rem;
+}
+.card-profile-stats .card-profile-stats-container .card-profile-stats-statistic p:last-child {
+  margin: 0;
+}
+.card-profile-stats .card-profile-stats-more .card-profile-stats-more-link {
+  margin: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.card-profile-stats .card-profile-stats-more .card-profile-stats-more-content {
+  display: none;
+}
+
+/* Large and up */
+
 /*# sourceMappingURL=output.css.map */
