@@ -2,10 +2,10 @@ const { Category } = require('../models');
 
 const categorydata = [
     {
-        category_name: 'random'
+        category_name: `tender`
     },
     {
-        category_name: 'stuff'
+        category_name: `roast`
     }
 ]
 

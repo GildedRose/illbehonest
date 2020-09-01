@@ -33,6 +33,26 @@ router.get('/:id', (req, res) => {
         });
 });
 
+// GET /api/users/username
+router.get('/username', (req, res) => {
+    User.findOne({
+        where: {
+             username//: req.params.username
+        }
+    })
+        .then(dbUserData => {
+            if (!dbUserData) {
+                res.status(404).json({ message: 'No user found with this name' });
+                return;
+            }
+            res.json(dbUserData);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
 // POST /api/users
 router.post('/', (req, res) => {
     // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
