@@ -272,5 +272,19 @@
 }
 
 /* Large and up */
+.animated-search-form[type=search] {
+  width: 10rem;
+  border: 0.125rem solid light-gray;
+  box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.18);
+  border-radius: global-radius;
+  background-image: url("https://image.ibb.co/i7NbrQ/search_icon_15.png");
+  background-position: 0.625rem 0.625rem;
+  background-repeat: no-repeat;
+  padding: 0.75rem 1.25rem 0.75rem 2rem;
+  transition: width 0.4s ease-in-out;
+}
+.animated-search-form[type=search]:focus {
+  width: 100%;
+}
 
 /*# sourceMappingURL=output.css.map */
