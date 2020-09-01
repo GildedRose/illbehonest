@@ -1,6 +1,13 @@
 const { Category } = require('../models');
 
-// seed data for categories here
+const categorydata = [
+    {
+        category_name: 'random'
+    },
+    {
+        category_name: 'stuff'
+    }
+]
 
 const seedCategory = () => Category.bulkCreate(categorydata);
 
