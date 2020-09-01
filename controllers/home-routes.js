@@ -38,7 +38,7 @@ router.get('/', (req, res) => {
             // res.render('homepage', dbPostData[0]);
             res.render('homepage', {
               posts,
-              // loggedIn: req.session.loggedIn
+              loggedIn: req.session.loggedIn
             });
         })
         .catch(err => {
