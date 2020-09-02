@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./public/stylesheet/css/output.css"> 
     <link rel="stylesheet" href="./public/stylesheet/css/foundation.css">
     <link rel="stylesheet" href="./public/stylesheet/css/app.css">
+    <link rel="stylesheet" href="./public/stylesheet/css/style.css">
   
   </head>
   
@@ -27,8 +28,15 @@
   <div id="topbar-responsive" class="topbar-responsive-links">
     <div class="top-bar-right">
       <ul class="menu simple vertical medium-horizontal">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Log In</a></li>
+        <li><a data-open="exampleModal1">Log In</a></li>
+          <div class="reveal" id="exampleModal1" data-reveal>
+            <h1>Awesome. I Have It.</h1>
+            <p class="lead">Your couch. It is mine.</p>
+            <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
         <li><a href="#">Create Account</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
@@ -49,22 +57,14 @@
             <p>Joined Jan.16th 2017</small></p>
           </div> <!-- /.card-profile-stats-intro-content -->
         </div> <!-- /.card-profile-stats-intro -->
-      
         <hr/>
-      
         <div class="card-profile-stats-container">
           <div class="card-profile-stats-statistic">
             <span class="stat">25</span>
             <p>posts</p>
           </div> <!-- /.card-profile-stats-statistic -->
-          <div class="card-profile-stats-statistic">
-            <span class="stat">125</span>
-            <p>followers</p>
-          </div> <!-- /.card-profile-stats-statistic -->
-          <div class="card-profile-stats-statistic">
-            <span class="stat">88</span>
-            <p>likes</p>
-          </div> <!-- /.card-profile-stats-statistic -->
+
+
         </div> <!-- /.card-profile-stats-container -->
       
         <div class="card-profile-stats-more">
@@ -224,6 +224,8 @@
     <script src="./public/js/vendor/jquery.js"></script>
     <script src="./public/js/vendor/what-input.js"></script>
     <script src="./public/js/vendor/foundation.js"></script>
+    <script src="./public/js/vendor/foundation.min.js"></script>
+    <script src="./public/js/vendor/foundation.reveal.js"></script>
     <script src="./public/js/app.js"></script>
   </body>
 </html>
