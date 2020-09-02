@@ -79,6 +79,18 @@ $dark-gray: color #423d3d;
   }
 }
 
+
+svg {
+  width: 20px;
+  height: 20px;
+}
+
+.button {
+  border-radius: 50px;
+}
+
+
+
 @keyframes fadeIn {
   from {
     opacity:0;
@@ -362,28 +374,30 @@ $large: 500px;
 
 
 /* Large and up */
-.card-profile-stats {
-  @mixin breakpoint($large) {
-  .card-profile-stats-intro {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: left;
+@mixin breakpoint($large) {
+  .card-profile-stats {
+    .card-profile-stats-intro {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      text-align: left;
 
-    .card-profile-stats-intro-pic {
-      margin: 0 1.25rem 0 0;
-      max-width: 250px;
-    } // .card-profile-stats-intro-pic
-  } // .card-profile-stats-intro
+      .card-profile-stats-intro-pic {
+        margin: 0 1.25rem 0 0;
+        max-width: 250px;
+      } // .card-profile-stats-intro-pic
+    } // .card-profile-stats-intro
 
-  .card-profile-stats-container {
-    display: flex;
-    justify-content: space-around;
-  } // .card-profile-stats-container
-} // .card-profile-stats
+    .card-profile-stats-container {
+      display: flex;
+      justify-content: space-around;
+    } // .card-profile-stats-container
+  } // .card-profile-stats
 
 } // media query - large & up
+
+
 
 $animated-search-form-initial-width: 10rem;
 $animated-search-form-transition-duration: 0.4s;
@@ -401,6 +415,30 @@ $animated-search-form-transition-duration: 0.4s;
 
   &:focus {
     width: 100%;
+  }
+}
+
+form {
+  .form-icons {
+    text-align: center;
+
+    h4 {
+      margin-bottom: 1rem;
+    }
+
+    .input-group-label {
+      background-color: $primary-color;
+      border-color: $primary-color;
+    }
+
+    .input-group-field {
+      border-color: $primary-color;
+    }
+
+    .fa {
+      color: white;
+      width: 1rem; // makes the width of icon labels equal
+    }
   }
 }
 
