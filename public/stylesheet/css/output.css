@@ -63,6 +63,15 @@
   }
 }
 
+svg {
+  width: 20px;
+  height: 20px;
+}
+
+.button {
+  border-radius: 50px;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -274,9 +283,9 @@
 /* Large and up */
 .animated-search-form[type=search] {
   width: 10rem;
-  border: 0.125rem solid light-gray;
-  box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.18);
-  border-radius: global-radius;
+  border: 0.125rem solid gray;
+  box-shadow: 10px 5px 5px lightslategray;
+  border-radius: 20px;
   background-image: url("https://image.ibb.co/i7NbrQ/search_icon_15.png");
   background-position: 0.625rem 0.625rem;
   background-repeat: no-repeat;
@@ -285,6 +294,24 @@
 }
 .animated-search-form[type=search]:focus {
   width: 100%;
+}
+
+form .form-icons {
+  text-align: center;
+}
+form .form-icons h4 {
+  margin-bottom: 1rem;
+}
+form .form-icons .input-group-label {
+  background-color: color pink;
+  border-color: color pink;
+}
+form .form-icons .input-group-field {
+  border-color: color pink;
+}
+form .form-icons .fa {
+  color: white;
+  width: 1rem;
 }
 
 /*# sourceMappingURL=output.css.map */
