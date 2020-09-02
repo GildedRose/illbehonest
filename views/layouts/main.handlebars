@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>I'll Be Honest</title>
-  <link rel="stylesheet" href="/stylesheet/css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="./public/stylesheet/css/output.css"> 
+    <link rel="stylesheet" href="./public/stylesheet/css/foundation.css">
+    <link rel="stylesheet" href="./public/stylesheet/css/app.css">
 </head>
 
 <body>
@@ -14,12 +17,24 @@
         <h1>
             <a href="/">I'll Be Honest</a>
         </h1>
-        <nav>
-            {{#if loggedIn}}
-            <button id="logout" class="btn-no-style">logout</button>
-            {{else}}
-            <a href="/login">login</a>
-            {{/if}}
+        <nav class="top-bar topbar-responsive">
+            <div class="top-bar-title">
+                <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+                    <button class="menu-icon" type="button" data-toggle></button>
+                </span>
+                <a class="topbar-responsive-logo" href="#"><strong>I'll Be Honest</strong></a>
+            </div>
+            <div id="top-bar-center"> 
+                <input type="search" name="search" placeholder="Search.." class="animated-search-form">
+            </div>
+            <div id="topbar-responsive" class="topbar-responsive-links">
+                <div class="top-bar-right">
+                    <ul class="menu simple vertical medium-horizontal">
+                        {{#if loggedIn}}
+                        <button id="logout" class="btn-no-style">logout</button>
+                        {{else}}
+                        <li><a href="/login">Log In</a></li>
+                        {{/if}}
         </nav>
         </header>
         <main>
