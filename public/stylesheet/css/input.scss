@@ -404,9 +404,9 @@ $animated-search-form-transition-duration: 0.4s;
 
 .animated-search-form[type=search] {
   width: $animated-search-form-initial-width;
-  border: 0.125rem solid light-gray;
-  box-shadow: 0 0 3.125rem rgba(0,0,0, 0.18);
-  border-radius: global-radius;
+  border: 0.125rem solid gray;
+  box-shadow: 10px 5px 5px lightslategray;
+  border-radius: 20px ;
   background-image: url('https://image.ibb.co/i7NbrQ/search_icon_15.png');
   background-position: 0.625rem 0.625rem;
   background-repeat: no-repeat;
@@ -417,6 +417,8 @@ $animated-search-form-transition-duration: 0.4s;
     width: 100%;
   }
 }
+
+
 
 form {
   .form-icons {
