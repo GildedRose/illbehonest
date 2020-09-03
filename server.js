@@ -15,7 +15,7 @@ const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
-    secret: 'Super secret secret',
+    secret: process.env.SESS_SECRET,
     cookie: {},
     resave: false,
     saveUninitialized: true,
@@ -24,7 +24,14 @@ const sess = {
     })
 };
 
-app.use(session(sess));
+
+app.use(session({
+    secret: process.env.SESS_SECRET,
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 2,
+        sameSite: true
+    }
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -39,7 +46,3 @@ app.set('view engine', 'handlebars');
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
 });
-
-// app.listen(3001, () => {
-//     console.log(`API server now on port 3001!`);
-// });
