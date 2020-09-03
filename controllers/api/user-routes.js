@@ -15,6 +15,14 @@ router.get('/', (req, res) => {
 
 // GET /api/users/1
 router.get('/:id', (req, res) => {
+    if(!req.session.views) {
+        req.session.views = 1;
+        console.log("This is your first visit");
+    } else {
+        req.session.views++
+        console.log(`You have visited ${req.session.views} times`);
+    }
+    
     User.findOne({
         where: {
             id: req.params.id
@@ -22,7 +30,7 @@ router.get('/:id', (req, res) => {
     })
         .then(dbUserData => {
             if (!dbUserData) {
-                res.status(404).json({ message: 'No user found with this id' });
+                res.status(404).json({ message: 'No user exists with this id' });
                 return;
             }
             res.json(dbUserData);
@@ -31,9 +39,9 @@ router.get('/:id', (req, res) => {
             console.log(err);
             res.status(500).json(err);
         });
-});
+    });
 
-// GET /api/users/username
+// (NOT WORKING) GET /api/users/username
 router.get('/username', (req, res) => {
     User.findOne({
         where: {
@@ -42,7 +50,7 @@ router.get('/username', (req, res) => {
     })
         .then(dbUserData => {
             if (!dbUserData) {
-                res.status(404).json({ message: 'No user found with this name' });
+                res.status(404).json({ message: 'No user exists with this name' });
                 return;
             }
             res.json(dbUserData);
@@ -55,18 +63,12 @@ router.get('/username', (req, res) => {
 
 // POST /api/users
 router.post('/', (req, res) => {
-    // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
+    // expects {username: 'GiveMeAHandle', email: 'handleman@gmail.com', password: 'password1234'}
     User.create({
         username: req.body.username,
         email: req.body.email,
         password: req.body.password
     })
-    //         .then(dbUserData => res.json(dbUserData))
-    //         .catch(err => {
-    //             console.log(err);
-    //             res.status(500).json(err);
-    //         });
-    // });
     .then(dbUserData => {
         req.session.save(() => {
         req.session.user_id = dbUserData.id;
@@ -86,14 +88,14 @@ router.post('/login', (req, res) => {
       }
     }).then(dbUserData => {
         if (!dbUserData) {
-            res.status(400).json({ message: 'No user with that email address!' });
+            res.status(400).json({ message: 'There is no user with such an email.' });
             return;
         }
 
         const validPassword = dbUserData.checkPassword(req.body.password);
 
         if (!validPassword) {
-            res.status(400).json({ message: 'Incorrect password!' });
+            res.status(400).json({ message: 'Please enter the appropriate password!' });
             return;
         }
 
@@ -103,7 +105,7 @@ router.post('/login', (req, res) => {
             req.session.username = dbUserData.username;
             req.session.loggedIn = true;
 
-            res.json({ user: dbUserData, message: 'You are now logged in!' });
+            res.json({ user: dbUserData, message: 'You are now ready to roast!' });
         });
     });
 });

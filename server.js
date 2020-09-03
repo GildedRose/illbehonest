@@ -14,9 +14,13 @@ const PORT = process.env.PORT || 3001;
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+// secret created and directed to the dotenv file
 const sess = {
     secret: process.env.SESS_SECRET,
-    cookie: {},
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 2,
+        sameSite: true
+    },
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
@@ -24,14 +28,8 @@ const sess = {
     })
 };
 
-
-app.use(session({
-    secret: process.env.SESS_SECRET,
-    cookie: {
-        maxAge: 1000 * 60 * 60 * 2,
-        sameSite: true
-    }
-}));
+// session with secret created and directed to the dotenv file
+app.use(session(sess));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
