@@ -1,33 +1,46 @@
 <form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
+  <div class="form-icons">
+    <h4>Please Log- In</h4>
+    <div class="input-group">
+      <span class="input-group-label">
+        <i class="fa fa-envelope"></i>
+      </span>
+      <input class="input-group-field" id="email-login" type="text" placeholder="Email">
+    </div>
+    <!-- Buttons -->
+    <div class="input-group">
+      <span class="input-group-label">
+        <i class="fa fa-key"></i>
+      </span>
+      <input class="input-group-field" id="password-login" type="text" placeholder="Password">
+    </div>
   </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit">login</button>
-  </div>
+  <button class="button">Log In</button>
 </form>
 
 <form class="signup-form">
-  <div>
-    <label for="username-signup">username:</label>
-    <input type="text" id="username-signup" />
+  <div class="form-icons">
+    <h4>Register for an account</h4>
+    <div class="input-group">
+      <span class="input-group-label">
+        <i class="fa fa-user"></i>
+      </span>
+      <input class="input-group-field" id="username-signup" type="text" placeholder="Username">
+    </div>
+    <div class="input-group">
+      <span class="input-group-label">
+        <i class="fa fa-envelope"></i>
+      </span>
+      <input class="input-group-field" id="email-signup" type="text" placeholder="Email">
+    </div>
+    <div class="input-group">
+      <span class="input-group-label">
+        <i class="fa fa-key"></i>
+      </span>
+      <input class="input-group-field" id="password-signup" type="text" placeholder="Password">
+    </div>
   </div>
-  <div>
-    <label for="email-signup">email:</label>
-    <input type="text" id="email-signup" />
-  </div>
-  <div>
-    <label for="password-signup">password:</label>
-    <input type="password" id="password-signup" />
-  </div>
-  <div>
-    <button type="submit">signup</button>
-  </div>
+  <button class="button expanded">Sign Up</button>
 </form>
 
 <script src="/javascript/login.js"></script>

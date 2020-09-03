@@ -15,14 +15,14 @@ router.get('/', (req, res) => {
 
 // GET /api/users/1
 router.get('/:id', (req, res) => {
-    if(!req.session.views) {
+    if (!req.session.views) {
         req.session.views = 1;
         console.log("This is your first visit");
     } else {
         req.session.views++
         console.log(`You have visited ${req.session.views} times`);
     }
-    
+
     User.findOne({
         where: {
             id: req.params.id
@@ -39,7 +39,7 @@ router.get('/:id', (req, res) => {
             console.log(err);
             res.status(500).json(err);
         });
-    });
+});
 
 // (NOT WORKING) GET /api/users/username
 router.get('/username', (req, res) => {
@@ -69,17 +69,18 @@ router.post('/', (req, res) => {
         email: req.body.email,
         password: req.body.password
     })
-  
-    .then(dbUserData => {
-        req.session.save(() => {
-        req.session.user_id = dbUserData.id;
-        req.session.username = dbUserData.username;
-        req.session.loggedIn = true;
-    
-        res.json(dbUserData);
 
-        });
-})
+        .then(dbUserData => {
+            req.session.save(() => {
+                req.session.user_id = dbUserData.id;
+                req.session.username = dbUserData.username;
+                req.session.loggedIn = true;
+
+                res.json(dbUserData);
+
+            });
+        })
+});
 
 // POST User session variable for logging in
 router.post('/login', (req, res) => {
@@ -165,4 +166,4 @@ router.delete('/:id', (req, res) => {
         });
 });
 
-module.exports = router; 
+module.exports = router;

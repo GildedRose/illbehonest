@@ -16,7 +16,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // secret created and directed to the dotenv file
 const sess = {
-    secret: process.env.SESS_SECRET,
+    secret: 'Super secret secret',
     cookie: {
         maxAge: 1000 * 60 * 60 * 2,
         sameSite: true
