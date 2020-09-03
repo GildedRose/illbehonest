@@ -1,7 +1,10 @@
 # I'll Be Honest
 <<<<<<< HEAD
+<<<<<<< HEAD
 A spicy hobby social media platform.
 =======
+=======
+>>>>>>> e6911518a2e0cc0cfce9b55b98ff0e95dba8c3b8
 
 ## DESCRIPTION
 
@@ -44,6 +47,12 @@ A cutthroat hobbyist social media fullstack web development platform where users
     * WHEN post is created, CATEGORY is assigned for voting purposes
     * WHEN post is created, COMMENTS are enabled
   
+  ### FUTURE UPDATES:
+
+  * Posts
+    * users can upload image links to content for roasting
+    * users can create content messages per posts to explain included image
+
   ## Installation
 
   ## Usage
@@ -52,13 +61,14 @@ A cutthroat hobbyist social media fullstack web development platform where users
 
   ## Technologies
 
-  1. Node.js, Express.js, Moment.js
-  2. Express-Session
-  3. MySQL & Sequelize
-  4. dotenv
-  5. Handlebars
-  6. Sass & Foundation
-  7. Heroku
+  1. [Node.js](https://www.npmjs.com/package/node), [Express.js](https://www.npmjs.com/package/express), [Moment.js](https://www.npmjs.com/package/moment)
+  2. [Express-Session](https://www.npmjs.com/package/express-session)
+  3. [MySQL](https://www.npmjs.com/package/mysql2) & [Sequelize](https://www.npmjs.com/package/sequelize)
+  4. [dotenv](https://www.npmjs.com/package/dotenv)
+  5. [bcrypt](https://www.npmjs.com/package/bcrypt)
+  6. [Express-Handlebars](https://www.npmjs.com/package/express-handlebars)
+  7. Sass & Foundation
+  8. Heroku
 
   ## Contribution
 
@@ -72,4 +82,7 @@ A cutthroat hobbyist social media fullstack web development platform where users
 
   If you have any additional questions not answered here or wish to contact me regarding developments, please email us at 
   [thedevmadia@gmail.com](mailto:thedevmadia@gmail.com)
+<<<<<<< HEAD
 >>>>>>> 052bbdeeab068730f565ba13561ca7c094a1955e
+=======
+>>>>>>> e6911518a2e0cc0cfce9b55b98ff0e95dba8c3b8
