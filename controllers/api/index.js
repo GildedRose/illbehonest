@@ -6,6 +6,7 @@ const postRoutes = require('./post-routes');
 const commentRoutes = require('./comment-routes');
 const categoryRoutes = require('./category-routes');
 
+
 // route for userRoutes
 router.use('/users', userRoutes);
 
@@ -16,7 +17,8 @@ router.use('/posts', postRoutes);
 router.use('/comments', commentRoutes);
 
 // route for category
-router.use('/categories', categoryRoutes)
+router.use('/categories', categoryRoutes);
+
 
 
 
