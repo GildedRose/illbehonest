@@ -1,18 +1,44 @@
-<section>
-  <h2>Create New Post</h2>
+<div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <div class="card-profile-stats">
+          <div class="card-profile-stats-intro">
+            <img class="card-profile-stats-intro-pic" src="https://pbs.twimg.com/profile_images/732634911761260544/OxHbNdTF.jpg" alt="profile-image" />
+              <div class="card-profile-stats-intro-content">
+                <h3>Joe Smith</h3>
+                <p>Joined Jan.16th 2017</small></p>
+              </div> <!-- /.card-profile-stats-intro-content -->
+          </div> <!-- /.card-profile-stats-intro -->
+  
+          <div class="card-profile-stats-container">
+            <div class="card-profile-stats-statistic">
+              <span class="stat">25</span>
+              <p>posts</p>
+            </div> <!-- /.card-profile-stats-statistic -->
+          </div> <!-- /.card-profile-stats-container -->
+        </div> <!-- /.card-profile-stats -->
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <div class="status-update-input-box">
+          <form>
+            <div class="row input-box-container">
+              <div class="columns">
+                <section>
+                <h2>Create New Post</h2>
 
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
-    <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
+                    <form class="new-post-form">
+                        <div>
+                            <label for="post-title">Title</label>
+                                <input type="text" id="post-title" name="post-title" />
+                        </div>
+                        <div>
+                            <label for="post-url">Link</label>
+                                <input id="post-url" name="post-url" />
+                        </div>
+                        <button type="submit" class="btn">Create</button>
+                    </form>
+                </section>
 
        
 {{#if posts.length}}
@@ -31,5 +57,3 @@
 {{/if}}
 
 <script src="/javascript/add-post.js"></script>
-
-// test
