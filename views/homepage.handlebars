@@ -1,18 +1,51 @@
-<ol class="post-list">
-  {{#each posts as |post|}}
-  <li>
-    <article class="post">
-      <div class="title">
-        <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
-        <span>({{post.post_url}})</span>
-      </div>
-      <div class="meta">
-        {{post.vote_count}} point(s) by {{post.user.username}} on
-        {{post.created_at}}
-        |
-        <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
-      </div>
-    </article>
-  </li>
-  {{/each}}
-</ol>
+
+<div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <div class="status-update-input-box">
+          <form>
+            <div class="row input-box-container">
+              <div class="columns">
+                <section>
+                <h2>Create New Post</h2>
+
+                    <form class="new-post-form">
+                      <div>
+                          <label for="post-title">Title</label>
+                            <input type="text" id="post-title" name="post-title" />
+                      </div>
+                      <div>
+                        <label> <!-- Add a Label here to give this input box a heading -->
+                          <textarea rows="5" placeholder="Hey Harry, What's on your mind?"></textarea>
+                        </label>
+                      </div>
+                      <div>
+                        <label for="post-url">Upload a Photo</label>
+                          <input id="post-url" name="post-url" />
+                      </div>
+                      <div class="small-12 medium-5 columns">
+                        <div class="user-submit-box">
+                          <input type="submit" class="button small" value="POST">
+                        </div>
+                      </div>
+                    </form>
+                </section>
+                <hr />
+                <div class="row">
+                  <div class="columns">
+                    <ul class="accordion post-list" data-responsive-accordion-tabs="accordion medium-tabs large-accordion" data-allow-all-closed="true">
+                      {{#each posts as |post|}}
+                      <li class="accordion-item is-active" data-accordion-item >
+                        <article class="post">
+                          <div class="title">
+                            <img src="{{post.post_url}}" target="_blank" class="accordion-title">{{post.title}}
+                          </div>
+                          <div class="meta">
+                            {{post.vote_count}} point(s) by {{post.user.username}} on
+                            {{post.created_at}}
+                            |
+                            <a href="/post/{{post.id}}" data-open="exampleModal2">{{post.comments.length}} comment(s)</a>
+                          </div>
+                        </article>
+                      </li>
+                      {{/each}}
+                    </ul>
