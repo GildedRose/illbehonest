@@ -17,6 +17,8 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 // secret created and directed to the dotenv file
 const sess = {
     secret: 'Super secret secret',
+    // ENABLE LINE 21, REMOVE LINE 19-20 BEFORE FINAL PUSH TO HEROKU/SUBMISSION
+    // secret: process.env.SESS_SECRET,
     cookie: {
         maxAge: 1000 * 60 * 60 * 2,
         sameSite: true

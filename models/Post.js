@@ -46,6 +46,7 @@ Post.init(
     },
     title: {
       type: DataTypes.STRING,
+      
       allowNull: false
     },
     post_url: {
@@ -57,7 +58,8 @@ Post.init(
     },
     post_summary: {
       type: DataTypes.TEXT,
-      allowNull: false
+      // defaultValue:
+      allowNull: true
     },
     user_id: {
       type: DataTypes.INTEGER,
