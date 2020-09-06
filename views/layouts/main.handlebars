@@ -1,65 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Over+the+Rainbow&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="/stylesheet/css/output.css"> 
-    <link rel="stylesheet" href="/stylesheet/css/foundation.css">
-    <link rel="stylesheet" href="/stylesheet/css/app.css">
-</head>
+    <!--<link rel="stylesheet" href="/stylesheet/css/foundation.css">-->
+    <!--<link rel="stylesheet" href="/stylesheet/css/app.css"> -->
+    <link rel="stylesheet" href="/stylesheet/css/style.css">
+  </head>
 
 <body>
-    <div class="wrapper">
-        <header>
-        <nav class="top-bar topbar-responsive">
-            <div class="top-bar-title">
-                <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
-                    <button class="menu-icon" type="button" data-toggle></button>
-                </span>
-                <a class="topbar-responsive-logo" href="#"><strong>I'll Be Honest</strong></a>
+      <header>
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+           <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample07">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              {{#if loggedIn}}
+                <li class="nav-item nav-link" id="logout">Logout</li>
+              {{else}}
+                <li class="nav-item"><a class="nav-link" href="/login">Log In</a>
+                </li>
+              {{/if}}
+            </ul>
             </div>
-            <div id="top-bar-center"> 
-                <input type="search" name="search" placeholder="Search.." class="animated-search-form">
+          </nav>
+        <!-- Jumbotron-->
+        <div class="grid-x grid-padding-x">
+          <div class="large-12 cell">
+            <div class="hero-section">
+                  <h1 class="hero-opacity hero-text">BUT YOU'LL BE </br> SORRY YOU ASKED</h1>
+                  <h2 class="hero-title hero-text">I'll Be Honest...</h2>
+
+                </div>
             </div>
-            <div id="topbar-responsive" class="topbar-responsive-links">
-                <div class="top-bar-right">
-                    <ul class="menu simple vertical medium-horizontal">
-                        {{#if loggedIn}}
-                        <button id="logout" class="btn-no-style">logout</button>
-                        {{else}}
-                        <li><a href="/login">Log In</a></li>
-                        {{/if}}
-        </nav>
-        </header>
-        <main>
-            <div class="grid-x grid-padding-x">
-      <div class="large-12 cell">
-        <div class="card-profile-stats">
-          <div class="card-profile-stats-intro">
-            <img class="card-profile-stats-intro-pic" src="https://pbs.twimg.com/profile_images/732634911761260544/OxHbNdTF.jpg" alt="profile-image" />
-              <div class="card-profile-stats-intro-content">
-                <h3>Joe Smith</h3>
-                <p>Joined Jan.16th 2017</small></p>
-              </div> <!-- /.card-profile-stats-intro-content -->
-          </div> <!-- /.card-profile-stats-intro -->
-  
-          <div class="card-profile-stats-container">
-            <div class="card-profile-stats-statistic">
-              <span class="stat">25</span>
-              <p>posts</p>
-            </div> <!-- /.card-profile-stats-statistic -->
-          </div> <!-- /.card-profile-stats-container -->
-        </div> <!-- /.card-profile-stats -->
-      </div>
-    </div>
+           </div>
+        </div>
+      </header>
+    <main>
         {{{ body }}}
         </main>
         <footer>
-        Thanks for joining the roast! Hope it was toasty!
         </footer>
-    </div>
 
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
@@ -71,7 +64,10 @@
     <script src="/js/vendor/foundation.js"></script>
     <script src="/js/vendor/foundation.min.js"></script>
     <script src="/js/vendor/foundation.reveal.js"></script>
-    <script src="/js/app.js"></script>     
+    <script src="/js/app.js"></script> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> 
 </body>
 
 </html>
