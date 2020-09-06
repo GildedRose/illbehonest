@@ -4,62 +4,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Over+the+Rainbow&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheet/css/output.css"> 
-    <link rel="stylesheet" href="/stylesheet/css/foundation.css">
-    <link rel="stylesheet" href="/stylesheet/css/app.css">
+  <link rel="stylesheet" href="/stylesheet/css/output.css"> 
+  <link rel="stylesheet" href="/stylesheet/css/foundation.css">
+  <link rel="stylesheet" href="/stylesheet/css/app.css">
+  <link rel="stylesheet" href="/stylesheet/css/style.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <header>
-        <nav class="top-bar topbar-responsive">
-            <div class="top-bar-title">
-                <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
-                    <button class="menu-icon" type="button" data-toggle></button>
-                </span>
-                <a class="topbar-responsive-logo" href="#"><strong>I'll Be Honest</strong></a>
-            </div>
-            <div id="top-bar-center"> 
-                <input type="search" name="search" placeholder="Search.." class="animated-search-form">
-            </div>
-            <div id="topbar-responsive" class="topbar-responsive-links">
-                <div class="top-bar-right">
-                    <ul class="menu simple vertical medium-horizontal">
-                        {{#if loggedIn}}
-                        <button id="logout" class="btn-no-style">logout</button>
-                        {{else}}
-                        <li><a href="/login">Log In</a></li>
-                        {{/if}}
+      <header>
+        <nav class="hover-underline-menu underline-from-center">
+            <ul class="menu align-center">
+              {{#if loggedIn}}
+                <li id="logout">Logout</li>
+              {{else}}
+                <li><a href="/login">Log In</a></li>
+              {{/if}}
+            </ul>
+   
         </nav>
-        </header>
-        <main>
-            <div class="grid-x grid-padding-x">
-      <div class="large-12 cell">
-        <div class="card-profile-stats">
-          <div class="card-profile-stats-intro">
-            <img class="card-profile-stats-intro-pic" src="https://pbs.twimg.com/profile_images/732634911761260544/OxHbNdTF.jpg" alt="profile-image" />
-              <div class="card-profile-stats-intro-content">
-                <h3>Joe Smith</h3>
-                <p>Joined Jan.16th 2017</small></p>
-              </div> <!-- /.card-profile-stats-intro-content -->
-          </div> <!-- /.card-profile-stats-intro -->
-  
-          <div class="card-profile-stats-container">
-            <div class="card-profile-stats-statistic">
-              <span class="stat">25</span>
-              <p>posts</p>
-            </div> <!-- /.card-profile-stats-statistic -->
-          </div> <!-- /.card-profile-stats-container -->
-        </div> <!-- /.card-profile-stats -->
-      </div>
-    </div>
+        <div class="grid-x grid-padding-x">
+          <div class="large-12 cell">
+            <div class="hero-section">
+                  <h1 class="hero-opacity hero-text">BUT YOU'LL BE </br> SORRY YOU ASKED</h1>
+                  <h2 class="hero-title hero-text">I'll Be Honest...</h2>
+                </div>
+            </div>
+           </div>
+        </div>
+      </header>
+    <main>
         {{{ body }}}
         </main>
         <footer>
         Thanks for joining the roast! Hope it was toasty!
         </footer>
-    </div>
 
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
