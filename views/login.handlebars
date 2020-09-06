@@ -1,49 +1,55 @@
 <div class="grid-x grid-padding-x">
   <div class="large-12 cell">
-    <form class="login-form">
-      <div class="form-icons">
-        <h4>Please Log- In</h4>
-        <div class="input-group">
-          <span class="input-group-label">
-            <i class="fa fa-envelope"></i>
-          </span>
-          <input class="input-group-field" id="email-login" type="text" placeholder="Email">
+    <div class="grid-x grid-padding-x">
+      <div class="large-6 medium-6 cell logincell">
+          <form class="login-form">
+            <div class="form-icons">
+              <h4>Please Log- In</h4>
+              <div class="input-group">
+                <span class="input-group-label">
+                  <i class="fa fa-envelope"></i>
+                </span>
+                <input class="input-group-field" id="email-login" type="text" placeholder="Email">
+              </div>
+              <!-- Buttons -->
+              <div class="input-group">
+                <span class="input-group-label">
+                  <i class="fa fa-key"></i>
+                </span>
+                <input class="input-group-field" id="password-login" type="password" style="-webkit-text-security: square;" placeholder="Password">
+              </div>
+            </div>
+            <button class="button expanded">Log-In</button>
+          </form>
         </div>
-        <!-- Buttons -->
-        <div class="input-group">
-          <span class="input-group-label">
-            <i class="fa fa-key"></i>
-          </span>
-          <input class="input-group-field" id="password-login" type="password" style="-webkit-text-security: square;" placeholder="Password">
-        </div>
-      </div>
-      <button class="button">Log In</button>
-    </form>
+        <div class="large-6 medium-6 cell">
+          <form class="signup-form">
+            <div class="form-icons">
+              <h4>Register for an account</h4>
+              <div class="input-group">
+                <span class="input-group-label">
+                  <i class="fa fa-user"></i>
+                </span>
+                <input class="input-group-field" id="username-signup" type="text" placeholder="Username">
+              </div>
+              <div class="input-group">
+                <span class="input-group-label">
+                  <i class="fa fa-envelope"></i>
+                </span>
+                <input class="input-group-field" id="email-signup" type="text" placeholder="Email">
+              </div>
+              <div class="input-group">
+                <span class="input-group-label">
+                  <i class="fa fa-key"></i>
+                </span>
+                <input class="input-group-field" id="password-signup" type="password" style="-webkit-text-security: square;" placeholder="Password">
+              </div>
+            </div>
+            <button class="button expanded">Sign Up</button>
+          </form>
 
-    <form class="signup-form">
-      <div class="form-icons">
-        <h4>Register for an account</h4>
-        <div class="input-group">
-          <span class="input-group-label">
-            <i class="fa fa-user"></i>
-          </span>
-          <input class="input-group-field" id="username-signup" type="text" placeholder="Username">
-        </div>
-        <div class="input-group">
-          <span class="input-group-label">
-            <i class="fa fa-envelope"></i>
-          </span>
-          <input class="input-group-field" id="email-signup" type="text" placeholder="Email">
-        </div>
-        <div class="input-group">
-          <span class="input-group-label">
-            <i class="fa fa-key"></i>
-          </span>
-          <input class="input-group-field" id="password-signup" type="password" style="-webkit-text-security: square;" placeholder="Password">
-        </div>
       </div>
-      <button class="button expanded">Sign Up</button>
-    </form>
+    </div>
   </div>
 </div>
 
