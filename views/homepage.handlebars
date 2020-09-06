@@ -10,14 +10,28 @@
                   </div>
                   <div id="post{{post.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
-                      <img src="{{post.post_url}}" target="_blank">
+                      <div class="row-my4">
+                        <div class="col-md-8">
+                          <h2 class="font-weight-bold mb-3 black-text">Hi! I am the first one.</h2>
+                            <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                        ullamco laboris</p>
+                            <p class="mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                            fugiat nulla pariatur.</p>
+                        </div>
+                        <div class="col-md-4 mt-3 pt-2">
+                          <div class="view z-depth-1">
+                            <img src="{{post.post_url}}" target="_blank" class="img-fluid">
+                          </div>
+                        </div>
                         <div class="meta">
                           {{post.vote_count}} point(s) by {{post.user.username}} on
-                          {{post.created_at}}
-                          |
-                          <a href="/post/{{post.id}}" data-open="exampleModal2">{{post.comments.length}} comment(s)</a>
+                            {{post.created_at}}
+                            |
+                            <a href="/post/{{post.id}}" data-open="exampleModal2">{{post.comments.length}} comment(s)</a>
                         </div>
                       </div>
+                    </div>
                   </div>
                   {{/each}}
                 </div>
