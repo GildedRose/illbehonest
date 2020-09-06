@@ -1,65 +1,15 @@
 <div class="grid-x grid-padding-x">
-      <div class="large-12 cell">
-        <div class="card-profile-stats">
-          <div class="card-profile-stats-intro">
-            <img class="card-profile-stats-intro-pic" src="https://pbs.twimg.com/profile_images/732634911761260544/OxHbNdTF.jpg" alt="profile-image" />
-              <div class="card-profile-stats-intro-content">
-                <h3>Joe Smith</h3>
-                <p>Joined Jan.16th 2017</small></p>
-              </div> <!-- /.card-profile-stats-intro-content -->
-          </div> <!-- /.card-profile-stats-intro -->
-  
-          <div class="card-profile-stats-container">
-            <div class="card-profile-stats-statistic">
-              <span class="stat">25</span>
-              <p>posts</p>
-            </div> <!-- /.card-profile-stats-statistic -->
-          </div> <!-- /.card-profile-stats-container -->
-        </div> <!-- /.card-profile-stats -->
-      </div>
-    </div>
-<div class="grid-x grid-padding-x">
-      <div class="large-12 cell">
-        <div class="status-update-input-box">
-          <form>
-            <div class="row input-box-container">
-              <div class="columns">
-                <section>
-                <h2>Create New Post</h2>
-
-                    <form class="new-post-form">
-                      <div>
-                          <label for="post-title">Title</label>
-                            <input type="text" id="post-title" name="post-title" />
-                      </div>
-                      <div>
-                        <label> <!-- Add a Label here to give this input box a heading -->
-                          <textarea rows="5" placeholder="Hey Harry, What's on your mind?"></textarea>
-                        </label>
-                      </div>
-                      <div>
-                        <label for="post-url">Upload a Photo</label>
-                          <input id="post-url" name="post-url" />
-                      </div>
-                      <div class="small-12 medium-5 columns">
-                        <div class="user-submit-box">
-                          <input type="submit" class="button small" value="POST">
-                        </div>
-                      </div>
-                    </form>
-                </section>
-                <hr />
-                <div class="row">
-                  <div class="columns">
-                    <ul class="accordion post-list" role="tablist" data-responsive-accordion-tabs="accordion medium-tabs large-accordion" data-allow-all-closed="true">
-                      {{#each posts as |post|}}
-                      <li class="accordion-item is-active" data-accordion-item>
-                        <article class="post accordion-title">
-                          <div class="title" >{{post.title}}
-                          </div>
-                        </article>
-                        <div class="accordion-content" data-tab-content>
-                            <img src="{{post.post_url}}" target="_blank">
+  <div class="large-12 cell">
+        <div class="gird-x grid-padding-x">
+          <div class="large-12 cell">
+                <ul class="accordion" data-accordion data-allow-all-closed="true">
+                  {{#each posts as |post|}}
+                  <li class="accordion-item is-active" data-accordion-item>
+                    <a href="{{post.post_url}}"> 
+                      {{post.title}}
+                    </a>
+                      <div class="accordion-content" data-tab-content>
+                        <img src="{{post.post_url}}" target="_blank">
                           <div class="meta">
                             {{post.vote_count}} point(s) by {{post.user.username}} on
                             {{post.created_at}}
@@ -68,6 +18,11 @@
                           </div>
                         </div>
                       </li>
-                      {{/each}}
-                    </ul>
+                    {{/each}}
+                  </ul>
+              </div>
+        </div>
+  </div>
+</div>
+                  
 
