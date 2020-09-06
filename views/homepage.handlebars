@@ -1,7 +1,7 @@
 <!-- OUTER ACCORDION -->
 
 <div class="accordian" id="accordionExample">
-    {{#each posts as |post|}}
+  {{#each posts as |post|}}
   <div class="card">
     <div class="card-header" id="headingOne">
       <h2 class="mb-0">
@@ -9,7 +9,7 @@
             {{post.title}}
         </button>
       </h2>
-       <div class="meta">
+          <div class="meta">
             {{post.vote_count}} point(s) by {{post.user.username}} on
               {{post.created_at}}
               |
@@ -17,7 +17,7 @@
           </div>
           <!-- Beginning Modal -->
           <div class="modal fade" id="exampleModal{{post.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog mw-100 w-100" role="document">
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel">{{post.title}}</h5>
@@ -42,38 +42,50 @@
                             <img src="{{post.post_url}}" target="_blank" class="img-fluid">
                           </div>
                         </div>
+                        <div class="row">
+                          <div class="col-md-6">                         
+                            <div class="status-upload">
+                              <form>
+                                <textarea name="comment-body" placeholder="Time to Roast!"></textarea>
+                                <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Existing Comments -->
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-8">
+                              <div class="page-header">
+                                <h1>Comments </h1>
+                              </div>
+                              <div class="comments-list">
+                                {{#each post.comments}}
+                                <hr />
+                                <div class="media">
+                                  <p>{{user.username}} on {{created_at}} </p>
+                                </div>
+                                <div class="media-body">
+                                  <h4>{{comment_text}}</h4>
+                              </div>
+                                {{/each}}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div> <!--Modal Body End-->
+                </div>
               </div>
             </div>
           </div>
-<!-- END MODAL -->
     </div>
-    <div id="post{{post.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
-        <div class="row-my4">
-          <div class="col-md-8">
-            <h2 class="font-weight-bold mb-3 black-text">Hi! I am the first one.</h2>
-              <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                          ullamco laboris</p>
-              <p class="mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                              fugiat nulla pariatur.</p>
-          </div>
-          <div class="col-md-4 mt-3 pt-2">
-            <div class="view z-depth-1">
-              <img src="{{post.post_url}}" target="_blank" class="img-fluid">
-            </div>
-          </div>
-         
-        </div>
-      </div>
-    </div>
-    {{/each}}
   </div>
+  {{/each}}
 </div>
- 
-                  
+
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script>
+            
 
