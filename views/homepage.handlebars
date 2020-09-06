@@ -17,38 +17,38 @@
           </div>
           <!-- Beginning Modal -->
           <div class="modal fade" id="exampleModal{{post.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">{{post.title}}</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-      </div>
-      <div class="modal-body">
-        <div id="post{{post.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-          <div class="card-body">
-            <div class="row-my4">
-              <div class="col-md-8">
-                <h2 class="font-weight-bold mb-3 black-text">Hi! I am the first one.</h2>
-                  <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                              ullamco laboris</p>
-                  <p class="mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                  fugiat nulla pariatur.</p>
-              </div>
-              <div class="col-md-4 mt-3 pt-2">
-                <div class="view z-depth-1">
-                  <img src="{{post.post_url}}" target="_blank" class="img-fluid">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">{{post.title}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
+                <div class="modal-body">
+                  <div id="post{{post.id}}">
+                    <div class="card-body">
+                      <div class="row-my4">
+                        <div class="col-md-8">
+                          <h2 class="font-weight-bold mb-3 black-text">Hi! I am the first one.</h2>
+                            <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                        ullamco laboris</p>
+                            <p class="mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                            fugiat nulla pariatur.</p>
+                        </div>
+                        <div class="col-md-4 mt-3 pt-2">
+                          <div class="view z-depth-1">
+                            <img src="{{post.post_url}}" target="_blank" class="img-fluid">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> <!--Modal Body End-->
               </div>
             </div>
           </div>
-         </div>
-      </div>
-    </div>
-  </div>
-</div>
 <!-- END MODAL -->
     </div>
     <div id="post{{post.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
@@ -68,6 +68,26 @@
             </div>
           </div>
          
+        </div>
+      </div>
+    </div>
+    <div id="post{{post.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="row-my4">
+          <div class="col-md-8">
+            <h2 class="font-weight-bold mb-3 black-text">Hi! I am the first one.</h2>
+              <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris</p>
+              <p class="mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                              fugiat nulla pariatur.</p>
+          </div>
+          <div class="col-md-4 mt-3 pt-2">
+            <div class="view z-depth-1">
+              <img src="{{post.post_url}}" target="_blank" class="img-fluid">
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
