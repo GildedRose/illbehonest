@@ -1,0 +1,77 @@
+
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'll Be Honest</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="./public/stylesheet/css/output.css"> 
+    <link rel="stylesheet" href="./public/stylesheet/css/foundation.css">
+    <link rel="stylesheet" href="./public/stylesheet/css/app.css">
+    <link rel="stylesheet" href="./public/stylesheet/css/style.css">
+  </head>
+<body>
+<div class="grid-x grid-padding-x">
+    <div class="large-12 cell">
+        <div class="Log-In">
+            <p>Please log in</p>
+            <button class='Log-In' data-open="login">Login</button>
+            <div class='reveal' id="login" data-reveal>
+                <form class="login-form">
+                    <div class="form-icons">
+                        <h4>Log-In</h4>
+                            <div class="input-group">
+                             <span class="input-group-label">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                            <input class="input-group-field" id="email-login" type="text" placeholder="Email">
+                        </div>
+                            <!-- Buttons -->
+                         <div class="input-group">
+                         <span class="input-group-label">
+                            <i class="fa fa-key"></i>
+                            </span>
+                         <input class="input-group-field" id="password-login" type="password" style="-webkit-text-security: square;" placeholder="Password">
+                        </div>
+                    </div>
+                <button class="button">Log In</button>
+            </form>
+            </div>
+        </div>
+        <br>
+            <div class="Sign-Up">
+            <p>Or create a new account</p>
+            <button class='Sign-Up' data-open="signup">Create Account</button>
+            <div class='reveal' id='signup' data-reveal>
+                <form class="signup-form">
+                    <div class="form-icons">
+                        <h4>Register for an account</h4>
+                            <div class="input-group">
+                                <span class="input-group-label">
+                                    <i class="fa fa-user"></i>
+                                </span>
+                                <input class="input-group-field" id="username-signup" type="text" placeholder="Username">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-label">
+                                    <i class="fa fa-envelope"></i>
+                                </span>
+                                <input class="input-group-field" id="email-signup" type="text" placeholder="Email">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-label">
+                                <i class="fa fa-key"></i>
+                            </span>
+                            <input class="input-group-field" id="password-signup" type="password" style="-webkit-text-security: square;" placeholder="Password">
+                        </div>
+                    </div>
+                    <button class="button expanded">Sign Up</button>
+                    </form>
+            </div>
+        </div>
+</div>
+</div>
+</body>
+</html>
