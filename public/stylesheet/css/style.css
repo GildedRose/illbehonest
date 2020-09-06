@@ -30,6 +30,10 @@ body {
     text-transform: uppercase;
 }
 
+.comment-text {
+  text-align: left;
+}
+
 .form-signin {
   width: 100%;
   max-width: 330px;
