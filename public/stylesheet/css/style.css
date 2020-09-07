@@ -30,8 +30,23 @@ body {
     text-transform: uppercase;
 }
 
+.post {
+  background-color: #aaaaaa;
+  border-radius: 15px;
+
+}
+
 .comment-text {
   text-align: left;
+}
+
+.form-control {
+  width: 500px;
+  border-radius: 50px; /*Ethan is editing css styles for modals*/
+  padding: 5px;
+  margin: 5px;
+  background: transparent;
+  border: none;
 }
 
 .form-signin {
