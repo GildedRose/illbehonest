@@ -10,6 +10,7 @@ router.get('/', (req, res) => {
         attributes: [
           'id',
           'post_url',
+          'summary',
           'title',
           'created_at',
           [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -35,6 +36,7 @@ router.get('/', (req, res) => {
             /* don't need to  need to serialize data before when you built API routes, because the res.json() method automatically does that */
             // res.render('homepage', dbPostData[0].get({ plain: true }));
             const posts = dbPostData.map(post => post.get({ plain: true }));
+            console.log(posts);
             // res.render('homepage', dbPostData[0]);
             res.render('homepage', {
               posts,

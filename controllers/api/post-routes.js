@@ -11,10 +11,9 @@ router.get('/', (req, res) => {
     attributes: [
       'id',
       'post_url',
-      'post_summary',
+      'summary',
       'title',
       'created_at',
-  
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
     ],
     order: [['created_at', 'DESC']],
@@ -115,19 +114,8 @@ router.put('/upvote', withAuth, (req, res) => {
     .then(updatedVoteData => res.json(updatedVoteData))
     .catch(err => {
       console.log(err);
-      res.status(400).json(err);
+      res.status(500).json(err);
     });
-
-  // // make sure the session exists first
-  // if (req.session) {
-  //   // pass session id along with all destructured properties on req.body
-  //   Post.upvote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
-  //     .then(updatedVoteData => res.json(updatedVoteData))
-  //     .catch(err => {
-  //       console.log(err);
-  //       res.status(500).json(err);
-  //     });
-  // }
 });
 
 // Update a post's title
