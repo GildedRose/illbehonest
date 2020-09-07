@@ -3,7 +3,7 @@ const { Post } = require('../models');
 // seed data for post here
 const postdata = [
     {
-      title: `On Black and White`,
+      title: 'On Black and White',
       post_url: 'https://images.pexels.com/photos/4903255/pexels-photo-4903255.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       post_summary: `I tried to get the lighting just right for this still image. Ansel Adams is my inspiration, can anyone give me some advice without making me feel bad?`,
       user_id: 1,
