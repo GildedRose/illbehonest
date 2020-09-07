@@ -14,7 +14,6 @@ router.get('/', withAuth, (req, res) => {
     attributes: [
       'id',
       'post_url',
-      'summary',
       'title',
       'created_at',
       [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -36,8 +35,6 @@ router.get('/', withAuth, (req, res) => {
   })
     .then(dbPostData => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
-      console.log(posts);
-      // how data is sent to handlebars
       res.render('dashboard', { posts, loggedIn: false });
     })
     .catch(err => {
