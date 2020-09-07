@@ -33,7 +33,9 @@ body {
 .post {
   background-color: #aaaaaa;
   border-radius: 15px;
-
+  border-radius: 25px;
+  max-width: 100%;
+  
 }
 
 .comment-text {
@@ -45,8 +47,8 @@ body {
   border-radius: 50px; /*Ethan is editing css styles for modals*/
   padding: 5px;
   margin: 5px;
-  background: transparent;
-  border: none;
+  background: whitesmoke;
+  border: 4px;
 }
 
 .form-signin {
