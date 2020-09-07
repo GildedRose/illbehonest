@@ -45,9 +45,10 @@
                         <div class="row">
                           <div class="col-md-6">                         
                             <div class="status-upload">
-                              <form>
+                              <form class="comment-form">
+                                <div class="hideme" id="{{post.id}}"></div> <!-- HACKY AF -->
                                 <textarea class="form-control rounded-0" name="comment-body" rows="3" placeholder="Time to Roast!"></textarea>
-                                <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button>
+                                <button type="submit" class="btn btn-success green submit"><i class="fa fa-share"></i> Submit</button>
                               </form>
                             </div>
                           </div>
@@ -107,5 +108,5 @@
   </div>
 </div>
  
-                  
+ <script src="/javascript/comment.js"></script>                
 
