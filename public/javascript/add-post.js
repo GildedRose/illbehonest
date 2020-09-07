@@ -5,6 +5,10 @@ async function newFormHandler(event) {
     const title = document.querySelector('input[name="post-title"]').value;
     const post_url = document.querySelector('input[name="post-url"]').value;
     const summary = document.querySelector('input[name="summary"]').value;
+
+    const post_summary = document.querySelector('textarea[name="post-summary"]').value;
+    const id = Math.floor((Math.random() * 101)+20);
+
   
     const response = await fetch(`/api/posts`, {
       method: 'POST',
@@ -12,6 +16,7 @@ async function newFormHandler(event) {
         id,
         title,
         post_url,
+
         summary,
         category_id,
         created_at,
@@ -23,6 +28,8 @@ async function newFormHandler(event) {
     });
   
     if (response.ok) {
+      console.log(response);
+      alert("OK!!!!!")
       document.location.replace('/dashboard');
     } else {
       alert(response.statusText);
