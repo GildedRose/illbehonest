@@ -58,7 +58,7 @@ Post.init(
     },
     post_summary: {
       type: DataTypes.TEXT,
-      // defaultValue:
+      defaultValue: DataTypes.TEXT,
       allowNull: true
     },
     user_id: {
