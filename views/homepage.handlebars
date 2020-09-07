@@ -8,7 +8,7 @@
 <!-- Photo URL -->
     <input type="text" id="post-url" class="form-control mb-4" for="post-url" name="post-url" placeholder="Photo URL">
 <!-- Submit -->
-    <button class="btn btn-info btn-block  submit" type="submit">Post</button>
+    <button class="btn btn-info btn-block roastme submit" type="submit">Let's Get Roasty!</button>
 </form>
 
 
@@ -47,21 +47,20 @@
                         <div class="col-md-8">
                           <h2 class="font-weight-bold mb-3 black-text">{{post.title}}</h2>
                             <p class="">{{post.post_summary}}</p>
-                            {{!-- <p class="mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                            fugiat nulla pariatur.</p> --}}
+                            
                         </div>
                         <div class="col-md-4 mt-3 pt-2">
                           <div class="view z-depth-1">
-                            <img src="{{post.post_url}}" target="_blank" class="img-fluid">
+                            <img src="{{post.post_url}}" target="_blank" class="responsive">
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-md-6">                         
                             <div class="status-upload">
-                              <form class="comment-form">
-                                <input id="hideme" name="hideme" type="hidden" value="{{post.id}}"><!-- HACKY AF -->
-                                <textarea class="form-control rounded-0" name="comment-body" rows="3" placeholder="Time to Roast!"></textarea>
-                                <button type="submit" class="btn btn-success green submit"><i class="fa fa-share"></i> Submit</button>
+                              <form class="comment-form form-2">
+                                <input id="hideme" name="hideme" type="hidden" value="{{post.id}}">
+                                <textarea class="form-control" name="comment-body" rows="3" placeholder="Time to Roast!"></textarea>
+                                <button type="submit" class="btn btn-success submit roastme"> Roast Me! </button>
                               </form>
                             </div>
                           </div>
@@ -69,7 +68,7 @@
                         <!-- Existing Comments -->
                         <div class="container">
                           <div class="row">
-                            <div class="col-md-8">
+                            <div class="col-md-8 comments">
                               <div class="page-header">
                                 <h1>Comments </h1>
                               </div>
