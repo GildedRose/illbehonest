@@ -54,7 +54,7 @@ Post.init(
         isURL: true
       }
     },
-    summary: {
+    post_summary: {
       type: DataTypes.TEXT,
       allowNull: true
     },
