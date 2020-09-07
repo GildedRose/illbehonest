@@ -47,6 +47,7 @@
                                   <form class="comment-form">
                                     <textarea class="form-control rounded-0" name="comment-body" rows="3" placeholder="Time to Roast!"></textarea>
                                     <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Add Comment</button>
+                                    <button type="click" class="upvote-btn btn btn-info">upvote</button>
                                   </form>
                                 </div>
                               </div>
@@ -102,4 +103,7 @@
     </div>
   {{/each}}
                   
-
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script>
+{{/if}}
