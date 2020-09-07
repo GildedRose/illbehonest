@@ -74,6 +74,6 @@ const votedata = [
         post_id: 2
     }
 ];
-const seedVotes = () => Vote.bulkCreate(votedata, { returning: true });
+const seedVotes = () => Vote.bulkCreate(votedata);
 
 module.exports = seedVotes;
