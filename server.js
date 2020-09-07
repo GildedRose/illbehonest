@@ -14,9 +14,15 @@ const PORT = process.env.PORT || 3001;
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
+// secret created and directed to the dotenv file
 const sess = {
     secret: 'Super secret secret',
-    cookie: {},
+    // ENABLE LINE 21, REMOVE LINE 19-20 BEFORE FINAL PUSH TO HEROKU/SUBMISSION
+    // secret: process.env.SESS_SECRET,
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 2,
+        sameSite: true
+    },
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
@@ -24,6 +30,7 @@ const sess = {
     })
 };
 
+// session with secret created and directed to the dotenv file
 app.use(session(sess));
 
 app.use(express.json());
@@ -39,7 +46,3 @@ app.set('view engine', 'handlebars');
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
 });
-
-// app.listen(3001, () => {
-//     console.log(`API server now on port 3001!`);
-// });

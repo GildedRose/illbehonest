@@ -54,6 +54,10 @@ Post.init(
         isURL: true
       }
     },
+    post_summary: {
+      type: DataTypes.TEXT,
+      allowNull: true
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

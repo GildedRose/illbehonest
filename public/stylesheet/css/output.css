@@ -280,22 +280,6 @@ svg {
   display: none;
 }
 
-/* Large and up */
-.animated-search-form[type=search] {
-  width: 10rem;
-  border: 0.125rem solid gray;
-  box-shadow: 10px 5px 5px lightslategray;
-  border-radius: 20px;
-  background-image: url("https://image.ibb.co/i7NbrQ/search_icon_15.png");
-  background-position: 0.625rem 0.625rem;
-  background-repeat: no-repeat;
-  padding: 0.75rem 1.25rem 0.75rem 2rem;
-  transition: width 0.4s ease-in-out;
-}
-.animated-search-form[type=search]:focus {
-  width: 100%;
-}
-
 form .form-icons {
   text-align: center;
 }
@@ -312,6 +296,19 @@ form .form-icons .input-group-field {
 form .form-icons .fa {
   color: white;
   width: 1rem;
+}
+
+.hero-section {
+  border: 1px solid medium-gray;
+  margin: 0 0 1.25rem;
+  padding: 1.25rem;
+  background: url("../assets/fire.gif") 50% no-repeat;
+  background-size: cover;
+  height: 40vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=output.css.map */
