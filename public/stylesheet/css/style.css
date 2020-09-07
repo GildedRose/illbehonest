@@ -45,7 +45,7 @@ body {
 }
 
 .form-control {
-  width: 500px;
+  width: 100%;
   border-radius: 50px; /*Ethan is editing css styles for modals*/
   padding: 5px;
   margin: 5px;
