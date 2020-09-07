@@ -6,7 +6,7 @@ async function commentFormHandler(event) {
   
     const comment_text2 = document.querySelector('textarea[name="comment-body"]').value.trim();
     const post_id2 = document.querySelector('input[name="hideme"]').getAttribute('value');
-    alert(post_id2)
+    
   
     
     if (comment_text2) {
@@ -22,7 +22,6 @@ async function commentFormHandler(event) {
         });
       
         if (response.ok) {
-          alert(response.statusText);
           document.location.reload();
           console.log(response);
         } else {
