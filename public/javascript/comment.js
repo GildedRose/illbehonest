@@ -2,12 +2,11 @@
 
 async function commentFormHandler(event) {
     event.preventDefault();
+    console.log(event);
   
     const comment_text2 = document.querySelector('textarea[name="comment-body"]').value.trim();
-    const post_id2 = document.querySelector('div[class="hideme"]').getAttribute("id");
-    //const post_id2 = window.location.toString().split('/')[
-      //window.location.toString().split('/').length - 1
-    //];
+    const post_id2 = document.querySelector('input[name="hideme"]').getAttribute('value');
+    alert(post_id2)
   
     
     if (comment_text2) {

@@ -1,5 +1,20 @@
-<!-- OUTER ACCORDION -->
+<form class="border border-light p-5 new-post-form">
 
+    <p class="h4 mb-4 text-center">Share Your Craft!</p>
+
+    <input type="text" id="post-title" class="form-control mb-4" for="post-title" name="post-title" placeholder="Title">
+
+    <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" name="post-summary" placeholder="Description"></textarea>
+<!-- Photo URL -->
+    <input type="text" id="post-url" class="form-control mb-4" for="post-url" name="post-url" placeholder="Photo URL">
+<!-- Submit -->
+    <button class="btn btn-info btn-block  submit" type="submit">Post</button>
+</form>
+
+
+
+
+<!-- OUTER ACCORDION -->
 <div class="accordian" id="accordionExample">
     {{#each posts as |post|}}
   <div class="card">
@@ -46,7 +61,7 @@
                           <div class="col-md-6">                         
                             <div class="status-upload">
                               <form class="comment-form">
-                                <div class="hideme" id="{{post.id}}"></div> <!-- HACKY AF -->
+                                <input id="hideme" name="hideme" type="hidden" value="{{post.id}}"><!-- HACKY AF -->
                                 <textarea class="form-control rounded-0" name="comment-body" rows="3" placeholder="Time to Roast!"></textarea>
                                 <button type="submit" class="btn btn-success green submit"><i class="fa fa-share"></i> Submit</button>
                               </form>
@@ -108,5 +123,6 @@
   </div>
 </div>
  
+ <script src="/javascript/add-post.js"></script>
  <script src="/javascript/comment.js"></script>                
 
