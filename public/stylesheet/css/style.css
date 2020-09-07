@@ -30,28 +30,8 @@ body {
     text-transform: uppercase;
 }
 
-.post {
-  background-color: #FFFFFF;
-  border-radius: 15px;
-  border-radius: 25px;
-  max-width: 80%;
-  align-self: center;
-  margin: 0 auto;
-  
-}
-
 .comment-text {
   text-align: left;
-}
-
-.form-control {
-  width: 100%;
-  border-radius: 50px; /*Ethan is editing css styles for modals*/
-  padding: 5px;
-  margin: 5px;
-  background: whitesmoke;
-  border: 4px;
-  
 }
 
 .form-signin {
@@ -112,18 +92,6 @@ body {
         -ms-flex-pack: distribute;
             justify-content: space-around;
   }
-
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-
-  
-
 }
 
   @media screen and (max-width: 600px) {
@@ -145,4 +113,3 @@ body {
     }
 
   }
-
