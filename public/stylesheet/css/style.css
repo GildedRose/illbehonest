@@ -30,6 +30,7 @@ body {
     text-transform: uppercase;
 }
 
+
 .post {
   background-color: #FFFFFF;
   max-width: 80%;
@@ -76,6 +77,7 @@ body {
   
 }
 
+p
 .form-signin {
   width: 100%;
   max-width: 330px;
@@ -105,7 +107,7 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-  
+
 
   @media screen and (max-width: 600px) {
     .hero-opacity {
@@ -126,4 +128,3 @@ body {
     }
 
   }
-
