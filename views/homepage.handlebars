@@ -1,0 +1,123 @@
+<form class="border border-light p-5 new-post-form">
+
+    <p class="h4 mb-4 text-center">Share Your Craft!</p>
+
+    <input type="text" id="post-title" class="form-control mb-4" for="post-title" name="post-title" placeholder="Title">
+
+    <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" name="post-summary" placeholder="Description"></textarea>
+<!-- Photo URL -->
+    <input type="text" id="post-url" class="form-control mb-4" for="post-url" name="post-url" placeholder="Photo URL">
+<!-- Submit -->
+    <button class="btn btn-info btn-block roastme submit" type="submit">Let's Get Roasty!</button>
+</form>
+
+
+
+
+<!-- OUTER ACCORDION -->
+<div class="accordian" id="accordionExample">
+    {{#each posts as |post|}}
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#post{{post.id}}" aria-expanded="true" aria-controls="collapseOne">
+            {{post.title}}
+        </button>
+      </h2>
+       <div class="meta">
+            {{post.vote_count}} point(s) by {{post.user.username}} on
+              {{post.created_at}}
+              |
+              <a href="#exampleModal{{post.id}}" data-toggle="modal" data-target="#exampleModal{{post.id}}">{{post.comments.length}} comment(s)</a>
+          </div>
+          <!-- Beginning Modal -->
+          <div class="modal fade" id="exampleModal{{post.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog mw-100 w-100" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">{{post.title}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                  <div id="post{{post.id}}">
+                    <div class="card-body">
+                      <div class="row-my4">
+                        <div class="col-md-8">
+                          <h2 class="font-weight-bold mb-3 black-text">{{post.title}}</h2>
+                            <p class="">{{post.post_summary}}</p>
+                            
+                        </div>
+                        <div class="col-md-4 mt-3 pt-2">
+                          <div class="view z-depth-1">
+                            <img src="{{post.post_url}}" target="_blank" class="responsive">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">                         
+                            <div class="status-upload">
+                              <form class="comment-form form-2">
+                                <input id="hideme" name="hideme" type="hidden" value="{{post.id}}">
+                                <textarea class="form-control" name="comment-body" rows="3" placeholder="Time to Roast!"></textarea>
+                                <button type="submit" class="btn btn-success submit roastme"> Roast Me! </button>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Existing Comments -->
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-8 comments">
+                              <div class="page-header">
+                                <h1>Comments </h1>
+                              </div>
+                              <div class="comments-list">
+                                {{#each post.comments}}
+                                <hr />
+                                <div class="media">
+                                  <p>{{user.username}} on {{created_at}} </p>
+                                </div>
+                                <div class="media-body">
+                                  <h4>{{comment_text}}</h4>
+                              </div>
+                                {{/each}}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div> <!--Modal Body End-->
+              </div>
+            </div>
+          </div>
+<!-- END MODAL -->
+    </div>
+    <div id="post{{post.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <div class="row-my4">
+          <div class="col-md-8">
+            {{!-- <h2 class="font-weight-bold mb-3 black-text">{{post.title}}</h2> --}}
+              <p class="">{{post.post_summary}}</p>
+              {{!-- <p class="mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                              fugiat nulla pariatur.</p> --}}
+          </div>
+          <div class="col-md-4 mt-3 pt-2">
+            <div class="view z-depth-1">
+              <img src="{{post.post_url}}" target="_blank" class="img-fluid">
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+ 
+ <script src="/javascript/add-post.js"></script>
+ <script src="/javascript/comment.js"></script>                
+

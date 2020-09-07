@@ -1,0 +1,342 @@
+
+// SASS Variables
+$topbar-responsive-bg: #2c3840;
+$topbar-responsive-animation-type: fade-in; // or use slide-down or none
+$white: #FFFFFF;
+$medium-gray: color #423d3d;
+$primary-color: color pink;
+$dark-gray: color #423d3d;
+
+$menu-underline-from-center-bg: #2C3840;
+$menu-underline-from-center-border-thickness: 0.125rem;
+
+.hover-underline-menu {
+  width: 100%;
+
+  .menu {
+    background-color: $menu-underline-from-center-bg;
+
+    a {
+      color: $white;
+      padding: 1.2rem 1.5rem;
+    }
+
+    .underline-from-center {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: calc(100% - #{$menu-underline-from-center-border-thickness});
+        border-bottom: $menu-underline-from-center-border-thickness solid $white;
+        left: 50%;
+        right: 50%;
+        transition: all 0.5s ease;
+      }
+
+      &:hover::after {
+        left: 0;
+        right: 0;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+}
+
+.status-update-input-box {
+    background-color: $white;
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid $medium-gray;
+    box-shadow: 0 0.0625rem 0.1875rem rgba(0,0,0, 0.18), 0 0.125rem 2px rgba(0,0,0, 0.36);
+  
+    .input-box-container {
+  
+      textarea {
+        margin-bottom: 0;
+  
+        &:focus {
+          border: 1px solid $medium-gray;
+          box-shadow: none;
+        }
+  
+        &,
+        &:focus {
+          border-bottom: none;
+        }
+      }
+    }
+  
+    .user-action-container {
+      @mixin breakpoint($medium) {
+        margin-right: 0;
+        margin-left: 0;
+      }
+  
+      .user-action-box {
+        padding: 0;
+        border: 1px solid $medium-gray;
+        display: flex;
+  
+        .action-area {
+          width: 20%;
+          border-right: 0.0625rem solid $medium-gray;
+          text-align: center;
+          padding-top: 0.675rem;
+          padding-bottom: 0.675rem;
+  
+          &:last-of-type {
+            border-right: none;
+          }
+  
+          .action-anchor {
+            &.has-tip {
+              border-bottom: none;
+              cursor: pointer;
+            }
+  
+            .fa {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+  
+      .user-submit-box {
+        padding: 0.35rem 0.5rem;
+        border: 1px solid $medium-gray;
+        display: flex;
+        justify-content: flex-end;
+  
+        @mixin breakpoint($small-only) {
+          border-top: none;
+          justify-content: center;
+        }
+  
+        @mixin breakpoint($medium) {
+          border-left: none;
+        }
+  
+        .button {
+          margin-bottom: 0;
+  
+          @mixin breakpoint($small-only) {
+            @include button-expand;
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+          }
+        }
+      }
+    }
+  }
+  $social-button-size: 2.5rem;
+$social-button-border-width: .125rem;
+$social-button-font-size: 1.25rem;
+$social-button-line-height: 1.8em;
+$social-button-border-radius: 1.6875rem;
+$social-button-transition: 0.5s ease all;
+$social-button-margin: .25rem;
+
+// Source: https://designpieces.com/2012/12/social-media-colours-hex-and-rgb/
+$social-brand-facebook: #3b5998;
+$social-brand-twitter: #55acee;
+$social-brand-linkedin: #007bb5;
+$social-brand-google-plus: #dd4b39;
+
+@mixin social-button($brand-color, $brand-icon) {
+  background: $brand-color;
+
+  &:before {
+    font-family: "FontAwesome";
+    content: $brand-icon;
+  }
+  &:hover,
+  &:focus {
+    color: $brand-color;
+    background: $white;
+    border-color: $brand-color;
+  }
+}
+
+.news-image-gallery-container {
+  background-color: $white;
+  padding: 2rem 1.5rem 1rem;
+  
+  .rounded-social-buttons {
+    text-align: left;
+
+    .social-button {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      width: $social-button-size;
+      height: $social-button-size;
+      border: $social-button-border-width solid transparent;
+      padding: 0;
+      text-decoration: none;
+      text-align: center;
+      color: $white;
+      font-size: $social-button-font-size;
+      font-weight: normal;
+      line-height: $social-button-line-height;
+      border-radius: $social-button-border-radius;
+      transition: $social-button-transition;
+      margin-right: $social-button-margin;
+      margin-bottom: $social-button-margin;
+
+      &:hover,
+      &:focus {
+        transform: rotate(360deg);
+      }
+
+      &.facebook {
+        @include social-button($social-brand-facebook, "\f09a")
+      }
+      &.twitter {
+        @include social-button($social-brand-twitter, "\f099")
+      }
+      &.linkedin {
+        @include social-button($social-brand-linkedin, "\f0e1")
+      }
+      &.google-plus {
+        @include social-button($social-brand-google-plus, "\f0d5")
+      }
+    }
+  }
+
+  .news-image-gallery-title {
+    margin-top: .5rem;
+  }
+
+  .read-more {
+    color: $dark-gray;
+  }
+}
+$comment-form-bg: color light-gray;
+$comment-section-bg: color white;
+$comment-section-padding: padding 0;
+$large: 500px;
+
+.comment-section-container {
+  background-color: $comment-section-bg;
+  padding: 0;
+}
+
+.comment-section-author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  .comment-section-name {
+    margin-left: 1rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.comment-section-box {
+  background-color: $comment-form-bg;
+  padding: 0;
+}
+
+.card-profile-stats {
+  border: 1px solid $medium-gray;
+  margin: 0 0 1.25rem;
+  padding: 1.25rem;
+  background: $white;
+
+  .card-profile-stats-intro {
+    text-align: center;
+
+    .card-profile-stats-intro-pic {
+      border-radius: 50%;
+      margin: 0 0 1.25rem;
+    } // .card-profile-stats-intro-pic
+
+    .card-profile-stats-intro-content {
+      p:last-child {
+        margin: 0;
+      } // p:last-child
+    } // .card-profile-stats-intro-content
+  } // .card-profile-stats-intro
+
+  .card-profile-stats-container {
+    text-align: center;
+
+    .card-profile-stats-statistic {
+      margin: 0 0 1.25rem;
+
+      p:last-child {
+        margin: 0;
+      }
+    } // .card-profile-stats-statistic
+  } // .card-profile-stats-container
+
+  .card-profile-stats-more {
+    .card-profile-stats-more-link {
+      margin: 0;
+      text-align: center;
+      font-size: 1.5rem;
+      color: black;
+      padding: 0.5rem;
+      cursor: pointer;
+    } // .card-profile-stats-more-link
+
+    .card-profile-stats-more-content {
+      display: none;
+    } // .card-profile-stats-more-content
+  } // .card-profile-stats-more
+} // .card-profile-stats
+
+
+
+
+form {
+  .form-icons {
+    text-align: center;
+
+    h4 {
+      margin-bottom: 1rem;
+    }
+
+    .input-group-label {
+      background-color: $primary-color;
+      border-color: $primary-color;
+    }
+
+    .input-group-field {
+      border-color: $primary-color;
+    }
+
+    .fa {
+      color: white;
+      width: 1rem; // makes the width of icon labels equal
+    }
+  }
+}
+
+$hero-height: 60vh;
+
+.hero-section {
+  border: 1px solid medium-gray;
+  margin: 0 0 1.25rem;
+  padding: 1.25rem;
+  background: url('../assets/fire.gif') 50% no-repeat;
+  background-size: cover;
+  height: $hero-height;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+  
+  
+  
+  

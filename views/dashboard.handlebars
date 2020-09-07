@@ -1,0 +1,43 @@
+
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <div class="status-update-input-box">
+          <form>
+            <div class="row input-box-container">
+              <div class="columns">
+                <section>
+                <h2>Create New Post</h2>
+                    <form class="new-post-form">
+                        <div>
+                            <label for="post-title">Title</label>
+                            <input type="text" id="post-title" name="post-title" />
+                        </div>
+                        <div>
+                            <label for="post-url">Link</label>
+                            <input type="text" id="post-url" name="post-url" />
+                        </div>
+                        <div>
+                            <label for="post-summary">Summary</label>
+                            <input type="text" id="post-summary" name="post-summary" />
+                        </div>
+                        <button type="submit" class="btn">Create</button>
+                    </form>
+                </section>
+
+       
+{{#if posts.length}}
+  <div class="row">
+    <div class="columns">
+      <h2>Your Posts</h2>
+      <ul class="accordion" data-responsive-accordion-tabs="accordion medium-tabs large-accordion" data-allow-all-closed="true">
+    {{#each posts as |post|}}
+    <li class="accordion-item is-active" data-accordion-item>
+      {{> post-info post}}
+      <a data-open="exampleModal2">Comments</a></li>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-post.js"></script>

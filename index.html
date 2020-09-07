@@ -1,0 +1,302 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'll Be Honest</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="./public/stylesheet/css/output.css"> 
+    <link rel="stylesheet" href="./public/stylesheet/css/foundation.css">
+    <link rel="stylesheet" href="./public/stylesheet/css/app.css">
+    <link rel="stylesheet" href="./public/stylesheet/css/style.css">
+  
+  </head>
+  
+  <body>
+<!-- Navigation Bar -->
+  <nav class="top-bar topbar-responsive">
+    <div class="top-bar-title">
+      <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle></button>
+      </span>
+      <a class="topbar-responsive-logo" href="#"><strong>I'll Be Honest</strong></a>
+    </div>
+    <div id="topbar-responsive" class="topbar-responsive-links">
+      <div class="top-bar-right">
+        <ul class="menu simple vertical medium-horizontal">
+          <li><a data-open="exampleModal1">Log In</a></li>
+          <!--MODAL to Log In-->
+            <div class="reveal" id="exampleModal1" data-reveal>
+              <form>
+                <div class="form-icons">
+                  <h4>Please Log- In</h4>
+                  <div class="input-group">
+                    <span class="input-group-label">
+                      <i class="fa fa-envelope"></i>
+                    </span>
+                    <input class="input-group-field" type="text" placeholder="Email">
+                  </div>
+                  <!-- Buttons -->
+                  <div class="input-group">
+                  <span class="input-group-label">
+                    <i class="fa fa-key"></i>
+                  </span>
+                    <input class="input-group-field" type="text" placeholder="Password">
+                  </div>
+                </div>
+                <button class="button">Log In</button>
+                <button class="button" data-open="exampleModal3">Create a New Account</button>
+              </form>
+              <button class="close-button" data-close aria-label="Close reveal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <!-- Nested Modal to Create Account-->
+            <div class="reveal" id="exampleModal3" data-reveal>
+              <h2>Create A New Account</h2>
+                <form>
+                  <div class="form-icons">
+                    <h4>Register for an account</h4>
+                      <div class="input-group">
+                        <span class="input-group-label">
+                          <i class="fa fa-user"></i>
+                        </span>
+                        <input class="input-group-field" type="text" placeholder="Full name">
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-label">
+                          <i class="fa fa-envelope"></i>
+                        </span>
+                        <input class="input-group-field" type="text" placeholder="Email">
+                      </div>
+                      <div class="input-group">
+                        <span class="input-group-label">
+                          <i class="fa fa-key"></i>
+                        </span>
+                        <input class="input-group-field" type="text" placeholder="Password">
+                      </div>
+                  </div>
+                  <button class="button expanded">Sign Up</button>
+                </form>
+                <button class="close-button" data-close aria-label="Close reveal" type="button">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Content -->
+  <!--Profile Card-->
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <div class="card-profile-stats">
+          <div class="card-profile-stats-intro">
+            <img class="card-profile-stats-intro-pic" src="https://pbs.twimg.com/profile_images/732634911761260544/OxHbNdTF.jpg" alt="profile-image" />
+              <div class="card-profile-stats-intro-content">
+                <h3>Joe Smith</h3>
+                <p>Joined Jan.16th 2017</small></p>
+              </div> <!-- /.card-profile-stats-intro-content -->
+          </div> <!-- /.card-profile-stats-intro -->
+  
+          <div class="card-profile-stats-container">
+            <div class="card-profile-stats-statistic">
+              <span class="stat">25</span>
+              <p>posts</p>
+            </div> <!-- /.card-profile-stats-statistic -->
+          </div> <!-- /.card-profile-stats-container -->
+        </div> <!-- /.card-profile-stats -->
+      </div>
+    </div>
+    <div class="grid-x grid-padding-x">
+      <div class="large-12 cell">
+        <div class="status-update-input-box">
+          <form>
+            <div class="row input-box-container">
+              <div class="columns">
+                <!--DASHBOARD HANDLEBARS-->
+                <label> <!-- Add a Label here to give this input box a heading -->
+                  <textarea rows="5" placeholder="Hey Harry, What's on your mind?"></textarea>
+                </label>
+              </div>
+            </div>
+            <div class="row medium-collapse user-action-container">
+              <div class="small-12 medium-7 columns">
+                <div class="user-action-box">
+                  <div class="action-area">
+                    <a href="#" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Upload a Photo">
+                      <i class="fa fa-picture-o" aria-hidden="true"></i>
+                      <span class="show-for-sr">Upload a Photo</span>
+                    </a>
+                  </div>
+                  <div class="action-area">
+                    <a href="#" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Add a Feeling">
+                      <i class="fa fa-smile-o" aria-hidden="true"></i>
+                      <span class="show-for-sr">Add a Feeling</span>
+                    </a>
+                  </div>
+                  <div class="action-area">
+                    <a href="#" class="action-anchor has-tip bottom" data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="Tag a Friend">
+                      <i class="fa fa-tags" aria-hidden="true"></i>
+                      <span class="show-for-sr">Tag a Friend</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="small-12 medium-5 columns">
+                <div class="user-submit-box">
+                  <input type="submit" class="button small" value="POST">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <input type="search" name="search" placeholder="Search.." class="animated-search-form">
+    <hr />
+   <!-- Accordions for Posts -->
+    <div class="row">
+      <div class="columns">
+        <ul class="accordion" data-responsive-accordion-tabs="accordion medium-tabs large-accordion" data-allow-all-closed="true">
+          <li class="accordion-item is-active" data-accordion-item>
+            <a href="#" class="accordion-title"><h5>Post Title</h5></a>
+            <div class="accordion-content" data-tab-content >
+              <p>Post Place Holder</p>
+              <a data-open="exampleModal2">Comments</a></li>
+          
+          
+          
+          
+              <!--MODAL to Comments-->
+            <div class="reveal" id="exampleModal2" data-reveal>
+              <form>
+                <div class="form-icons">
+                  <form class="comment-section-form">
+                    <div class="comment-section-box">
+                      <div class="row">
+                        <div class="small-12 column">
+                          <h4>Leave a Comment</h4>
+
+                          <label>Comment
+                            <textarea rows="10" type="text"></textarea>
+                          </label>
+                          <button class="button expanded">Submit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                <a class="button" data-open="exampleModal4">Read Comments!</a>
+                <button class="close-button" data-close aria-label="Close reveal" type="button">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            </form>
+          </div>
+      <!--<div class="reveal" id="exampleModal4" data-reveal>
+            <!-- comments 
+            <div class="comment-section-container">
+              <h3>Comments (2)</h3>
+              <div class="comment-section-author">
+                <img src="https://placehold.it/50x50" alt="">
+                <div class="comment-section-name">
+                  <h5><a href="">Janice Jones</a></h5>
+                  <p>March 12, 2017 at 1:28pm</p>
+                </div>
+              </div>
+              <div class="comment-section-text">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum facilis tenetur a voluptatibus quia
+                  deserunt.
+                </p>
+              </div> -->
+            </div>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </li>
+        <li class="accordion-item is-active" data-accordion-item>
+          <a href="#" class="accordion-title"><h5>Post Title</h5></a>
+          <div class="accordion-content" data-tab-content >
+            <p>Post Place Holder</p>
+            <a data-open="exampleModal2">Comments</a></li>
+        <!--MODAL to Comments-->
+          <div class="reveal" id="exampleModal2" data-reveal>
+            <form>
+              <div class="form-icons">
+                <form class="comment-section-form">
+                  <div class="comment-section-box">
+                    <div class="row">
+                      <div class="small-12 column">
+                        <h4>Leave a Comment</h4>
+                        <label>Name
+                          <input type="text">
+                        </label>
+                        <label>Email
+                          <input type="text">
+                        </label>
+                        <label>Comment
+                          <textarea rows="10" type="text"></textarea>
+                        </label>
+                        <button class="button expanded">Submit</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              <a class="button" data-open="exampleModal4">Read Comments!</a>
+              <button class="close-button" data-close aria-label="Close reveal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="reveal" id="exampleModal4" data-reveal>
+          <!-- comments -->
+          <div class="comment-section-container">
+            <h3>Comments (2)</h3>
+            <div class="comment-section-author">
+              <img src="https://placehold.it/50x50" alt="">
+              <div class="comment-section-name">
+                <h5><a href="">Janice Jones</a></h5>
+                <p>March 12, 2017 at 1:28pm</p>
+              </div>
+            </div>
+            <div class="comment-section-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum facilis tenetur a voluptatibus quia
+                deserunt.
+              </p>
+            </div>
+            <div class="comment-section-author">
+              <img src="https://placehold.it/50x50" alt="">
+              <div class="comment-section-name">
+                <h5><a href="">Janice Jones</a></h5>
+                <p>March 12, 2017 at 1:28pm</p>
+              </div>
+            </div>
+            <div class="comment-section-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum facilis tenetur a voluptatibus quia deserunt.
+              </p>
+            </div>
+          </div>
+          <button class="close-button" data-close aria-label="Close reveal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+            
+<!-- Scripts -->
+    <script src="./public/js/vendor/jquery.js"></script>
+    <script src="./public/js/vendor/what-input.js"></script>
+    <script src="./public/js/vendor/foundation.js"></script>
+    <script src="./public/js/vendor/foundation.min.js"></script>
+    <script src="./public/js/vendor/foundation.reveal.js"></script>
+    <script src="./public/js/app.js"></script>
+  </body>
+</html>
