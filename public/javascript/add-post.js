@@ -4,7 +4,7 @@ async function newFormHandler(event) {
   
     const title = document.querySelector('input[name="post-title"]').value;
     const post_url = document.querySelector('input[name="post-url"]').value;
-    const post_summary = document.querySelector('input[name="post-summary"]').value;
+    const summary = document.querySelector('input[name="summary"]').value;
   
     const response = await fetch(`/api/posts`, {
       method: 'POST',
@@ -12,7 +12,7 @@ async function newFormHandler(event) {
         id,
         title,
         post_url,
-        post_summary,
+        summary,
         category_id,
         created_at,
         updated_at
