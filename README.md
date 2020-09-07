@@ -116,7 +116,7 @@ A cutthroat hobbyist social media fullstack web development platform where users
   4. [dotenv](https://www.npmjs.com/package/dotenv)
   5. [bcrypt](https://www.npmjs.com/package/bcrypt)
   6. [Express-Handlebars](https://www.npmjs.com/package/express-handlebars)
-  7. [Sass](https://sass-lang.com/) & [Foundation](https://get.foundation/)
+  7. [Sass](https://sass-lang.com/) & [BootStrap](https://getbootstrap.com/)
   8. [Heroku](http://heroku.com/)
 
   ## Contribution
